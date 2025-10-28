@@ -1,6 +1,6 @@
 FROM php:8.4-alpine
 
-RUN apk add gcompat
+RUN apk add libc6-compat
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
